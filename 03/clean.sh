@@ -17,7 +17,7 @@ clean_by_log() {
     
     # Читаем лог-файл и ищем строки с папками
     while IFS= read -r line; do
-        if [[ "$line" == PATH:* && "$line" != *.* ]]; then  # Строка без точки - это папка
+        if [[ "$line" == PATH:* ]]; then  # Строка без точки - это папка
             local path=$(echo "$line" | sed 's/^PATH: //' | sed 's/,.*//')
             
             if [ -n "$path" ] && [ -d "$path" ]; then  # Проверяем, что это папка
