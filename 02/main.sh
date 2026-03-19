@@ -3,7 +3,7 @@
 script_dir=$(dirname "$(realpath "$0")")
 log_file="$script_dir/report.log"
 
-source "$script_dir/output.sh"
+source functions.sh
 
 rm -f "$log_file"
 touch "$log_file"

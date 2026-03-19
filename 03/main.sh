@@ -1,8 +1,6 @@
 #!/bin/bash
 
-script_dir=$(dirname "$(realpath "$0")")
-
-source "$script_dir/clean.sh"
+source functions.sh
 
 case $clean_method in
     1)
