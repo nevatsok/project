@@ -1,5 +1,5 @@
 #!/bin/bash
-source input.sh
+source checks.sh
 
 memcheck() {
     local avail_kb=$(df / | awk 'NR==2 {print $4}')

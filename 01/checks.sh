@@ -26,8 +26,8 @@ if [[ "$folders_num" =~ [^0-9]+ ]]; then
     exit 1
 fi
 
-if [ "$folders_num" -gt 248 ]; then
-    echo -e "\e[91mError. Number of folders cannot exceed 248: $folders_num\e[0m"
+if [ "$folders_num" -gt 245 ]; then
+    echo -e "\e[91mError. Number of folders cannot exceed 245: $folders_num\e[0m"
     exit 1
 fi
 
@@ -38,6 +38,11 @@ fi
 
 if [[ "$files_num" =~ [^0-9]+ ]]; then
     echo -e "\e[91mError. Parameter is not a number: $files_num\e[0m"
+    exit 1
+fi
+
+if [ "$files_num" -gt 241 ]; then
+    echo -e "\e[91mError. Number of files cannot exceed 241: $files_num\e[0m"
     exit 1
 fi
 
